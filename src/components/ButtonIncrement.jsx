@@ -1,7 +1,7 @@
-export default function ButtonIncrement({ currentHealth, setCurrentHealth }) {
+export default function ButtonIncrement({ damage, currentHealth, setCurrentHealth }) {
   return (
     <button className="increment" onClick={() => {
-      setCurrentHealth(parseInt(currentHealth) + 1);
+      setCurrentHealth(parseInt(currentHealth) + parseInt(damage));
     }}>+</button>
   );
 }

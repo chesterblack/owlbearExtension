@@ -1,7 +1,7 @@
-export default function ButtonDecrement({ currentHealth, setCurrentHealth }) {
+export default function ButtonDecrement({ damage, currentHealth, setCurrentHealth }) {
   return (
     <button className="decrement" onClick={() => {
-      setCurrentHealth(parseInt(currentHealth) - 1);
+      setCurrentHealth(parseInt(currentHealth) - parseInt(damage));
     }}>-</button>
   );
 }

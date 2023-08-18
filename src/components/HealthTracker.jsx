@@ -13,7 +13,6 @@ export default function HealthTracker() {
     const handleItemsChange = async (items) => {
       const healthItems = [];
       for (const item of items) {
-        console.log(item);
         if (isImage(item)) {
           const metadata = item.metadata[getPluginId('metadata')];
 

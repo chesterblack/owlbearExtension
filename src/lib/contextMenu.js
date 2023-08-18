@@ -2,7 +2,6 @@ import OBR from "@owlbear-rodeo/sdk";
 import getPluginId from "./getPluginId";
 
 export function setupContextMenu() {
-  console.log('context setup');
   OBR.contextMenu.create({
     id: getPluginId('context-menu'),
     icons: [
