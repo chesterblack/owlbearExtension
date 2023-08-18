@@ -7,6 +7,7 @@ export function isPlainObject(item) {
 export function isMetadata(metadata) {
   return (
     isPlainObject(metadata) &&
-    typeof metadata.health === "number"
+    typeof metadata.health === "number" &&
+    typeof metadata.healthDescription === "string"
   );
 }

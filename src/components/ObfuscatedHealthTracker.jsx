@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import OBR, { isImage } from "@owlbear-rodeo/sdk";
 import getPluginId from "../lib/getPluginId";
-import HealthTrackerItem from "./HealthTrackerItem";
+import ObfuscatedHealthTrackerItem from "./ObfuscatedHealthTrackerItem";
 import { isMetadata } from "../lib/typeValidators";
 
-export default function HealthTracker() {
+export default function ObfuscatedHealthTracker() {
   const [healthItems, setHealthItems] = useState([]);
 
   useEffect(() => {
@@ -16,11 +16,10 @@ export default function HealthTracker() {
 
           if (isMetadata(metadata)) {
             healthItems.push(
-              <HealthTrackerItem
+              <ObfuscatedHealthTrackerItem
                 key={`health-${item.id}`}
                 id={item.id}
                 name={item.text.plainText || item.name}
-                health={metadata.health}
                 healthDescription={metadata.healthDescription}
                 visible={item.visible}
               />

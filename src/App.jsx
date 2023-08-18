@@ -3,6 +3,7 @@ import OBR from "@owlbear-rodeo/sdk";
 import HealthTracker from './components/HealthTracker'
 import { setupContextMenu } from './lib/contextMenu';
 import { useEffect, useState } from 'react';
+import ObfuscatedHealthTracker from './components/ObfuscatedHealthTracker';
 
 function App() {
   const [sceneReady, setSceneReady] = useState(false);
@@ -29,12 +30,7 @@ function App() {
     if (isDM) {
       return <HealthTracker />;
     } else {
-      return (
-        <>
-          <h1>Health Tracker</h1>
-          <p>Sorry, only the DM can see this...</p>
-        </>
-      );
+      return <ObfuscatedHealthTracker />
     }
   } else {
     // Show a basic header when the scene isn't ready

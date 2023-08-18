@@ -32,7 +32,8 @@ export function setupContextMenu() {
         OBR.scene.items.updateItems(context.items, (items) => {
           for (let item of items) {
             item.metadata[getPluginId('metadata')] = {
-              health: 0,
+              health: 10,
+              healthDescription: 'Uninjured',
             };
           }
         });
