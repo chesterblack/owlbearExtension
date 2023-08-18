@@ -100,3 +100,7 @@ button.decrement {
     display: flex;
     flex-direction: column;
 }
+
+p {
+    padding: 0 15px;
+}
